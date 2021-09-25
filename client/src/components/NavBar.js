@@ -7,7 +7,6 @@ import { SHOP_ROUTE } from '../utils/consts';
 import Container from "react-bootstrap/Container";
 import { Button } from 'react-bootstrap'
 import { observer } from 'mobx-react-lite';
-import './NavStyle.css'
 
 const NavBar = observer(() => {
     const {user} = useContext(Context)
@@ -16,12 +15,12 @@ const NavBar = observer(() => {
             <Container>
             <NavLink style={{color:'white'}} to={SHOP_ROUTE}>Купи и Отстань</NavLink>
                 {user.isAuth ?
-                    <Nav className='buttons' style={{color: 'white'}}>
+                    <Nav className='ml-auto' style={{color: 'white'}}>
                         <Button variant={'outline-light'}>Админ панель</Button>
-                        <Button variant={'outline-light'} className="ml=4">Войти</Button>
+                        <Button variant={'outline-light'} className="ml-4">Войти</Button>
                     </Nav>
                     :
-                    <Nav className='mr-auto' style={{color: 'white'}}>
+                    <Nav className='mr-auto' style={{color: 'red'}}>
                         <Button variant={'outline-light'} onClick={() => user.setIsAuth(true)}>Авторизация</Button>
                     </Nav>
                 }
