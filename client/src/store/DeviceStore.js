@@ -11,14 +11,20 @@ export default class DeviceStore {
         this._brands = [
             {id: 1, name: 'Samsung'},
             {id: 2, name: 'Apple'},
+            {id: 3, name: 'Nokia'},
+            {id: 4, name: 'Motorola'},
         ]
         this._devices = [
             {id: 1, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`},
-            {id: 1, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`},
-            {id: 1, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`},
-            {id: 1, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`}
+            {id: 2, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`},
+            {id: 3, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`},
+            {id: 4, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`},
+            {id: 5, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`},
+            {id: 6, name: 'Iphone 12 pro', price: 25000, rating: 5, img:`https://estore.ua/media/catalog/product/cache/8/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-12-pro-pacific-blue_3_.jpeg`},
+
         ]
         this._selectedType = {}
+        this._selectedBrand = {}
         makeAutoObservable(this)
     }
 
@@ -34,6 +40,9 @@ export default class DeviceStore {
     setSelectedType(type) {
         this._selectedType = type
     }
+    setSelectedBrand(brand) {
+        this._selectedBrand = brand
+    }
 
     get types() {
         return this._types
@@ -46,5 +55,8 @@ export default class DeviceStore {
     }
     get selectedType() {
         return this._selectedType
+    }
+    get selectedBrand() {
+        return this._selectedBrand
     }
 }
